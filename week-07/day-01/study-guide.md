@@ -100,5 +100,9 @@ the outcome is!
 - Pay particular attention to picking the most appropriate semantic HTML
   elements. Not everything goes in a `div`!
 - Think of the `div`s as sections and group items within where appropriate
+- Make sure you keep your HTML code neat and easily maintainable
+  - The HTML is indented consistently
+  - Spacing is applied consistently
+  - Code is fairly terse
 
 [semantic-html.html]: ./semantic-html.html
