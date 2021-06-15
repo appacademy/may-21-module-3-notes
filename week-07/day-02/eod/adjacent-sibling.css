@@ -1,0 +1,8 @@
+#adjacent-sibling {
+  border: 1px solid black;
+}
+
+.item-2 + .item-1 {
+  color: red;
+  font-weight: bold;
+}

@@ -1,0 +1,161 @@
+html,
+body {
+    font-family: fell, Georgia, Cambria, "Times New Roman", ;
+}
+
+.header {
+    margin: 0 auto;
+    width: 80%;
+}
+
+.nav__upper {
+    padding: 20px;
+    position: relative;
+}
+
+.upper__left {
+    height: 32px;
+    width: 32px;
+}
+
+.upper__right {
+    margin-left: auto;
+    display: inline-block;
+    vertical-align: middle;
+    position: absolute;
+    right: 0;
+}
+
+.sign-in, .get-started {
+    display: inline-block;
+    width: fit-content;
+    margin: 0 auto;
+    padding: 12px;
+}
+
+.sign-in {
+    padding: 7px 16px 9px;
+    font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #1A8917;
+    text-decoration: none;
+}
+
+.get-started {
+    color: #1A8917;
+    font: 14px;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 7px 16px 9px;
+    border: 1px solid #1A8917;
+    box-sizing: border-box;
+    border-radius: 4px;
+    text-decoration: none;
+}
+
+.get-started:hover {
+    background-color: #1A8917;
+    color: white;
+}
+
+.nav__lower {
+    width: fit-content;
+    margin: 0 auto;
+}
+
+.nav__lower a {
+    display: inline-block;
+    margin: 0 16px;
+    padding: 7px;
+    text-decoration: none;
+    font-weight: 500;
+    color: #757575;
+    font-size: 16px;
+}
+
+.content, .grid {
+    width: 35%;
+    padding: 1em;
+    margin: 0 auto;
+}
+
+h1 {
+    box-sizing: border-box;
+    display: block;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 60px;
+    overflow-wrap: break-word;
+}
+
+.main__img {
+    display: block;
+    max-width: 100%;
+}
+
+p {
+    font-size: 21px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    margin-top: 40px;
+}
+
+h2 {
+    font-size: 30px;
+    margin-top: 40px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.external_links {
+    padding: 1em;
+}
+
+ul {
+    font-size: 18px;
+    display: inline-block;
+}
+
+li a {
+    color: blue;
+    font-size: 18px;
+}
+
+.external_img {
+    height: 15px;
+    width: 15px;
+}
+
+.grid a {
+    width: 49%;
+    display: inline-block;
+    box-sizing: border-box;
+    padding: 1em;
+    text-decoration: none;
+    color: #272727;
+    font-weight: 600;
+}
+
+.footer {
+    width: 60%;
+    margin: 0 auto;
+    padding: .5em;
+    position: relative;
+}
+
+.footer__left {
+    height: 32px;
+    width: 32px;
+}
+
+.footer__right {
+    position: absolute;
+    top: 14px;
+    right: 0;
+}
+
+.footer__right a {
+    text-decoration: none;
+    font-size: 16px;
+    padding: 1em;
+    color: #272727
+}
