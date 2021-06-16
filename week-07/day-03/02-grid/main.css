@@ -1,0 +1,90 @@
+/* PAGE SETTINGS - DO NOT EDIT */
+html, body, div {
+    font-family: sans-serif;
+    background-color: antiquewhite;
+    padding: 20px;
+}
+
+/* ====== */
+
+.grid-container {
+    text-align: center;
+
+    /* Phase 1 */
+    /*!!START */
+    display: grid;
+    grid-template-columns: 3fr auto 1fr;
+    grid-template-areas:
+    "header header header"
+    "main . sidebar"
+    "footer footer footer";
+    /*!!END */
+
+    /* Bonus Phase */
+    /*!!START */
+    /*grid-gap: 15px 0;*/
+    /*!!END */
+}
+.item-1 {
+    background-color: #87a7b3; /* steel blue */
+
+    /* Phase 1 */
+    /*!!START */
+    grid-area: header;
+    /*!!END */
+}
+.item-2 {
+    background-color: #e1f1dd; /* light sea green */
+
+    /* Phase 1 */
+    /*!!START */
+    grid-area: main;
+    /*!!END */
+}
+.item-3 {
+    background-color: #cdc7be; /* grey */
+
+    /* Phase 1 */
+    /*!!START */
+    grid-area: sidebar;
+    /*!!END */
+}
+.item-4 {
+    background-color: #766161; /* brown */
+    color: antiquewhite;
+
+    /* Phase 1 */
+    /*!!START */
+    grid-area: footer;
+    /*!!END */
+}
+
+.divider {
+    background-image: linear-gradient(to right, #e1f1dd, #cdc7be);
+
+    /* Bonus Phase */
+    /*!!START */
+    /*width: 100px;*/
+    /*box-sizing: border-box;*/
+    /*!!END */
+}
+
+/* ====== */
+
+.grid-container-flow {
+    border: solid #87a7b3 2px;
+    margin: 20px;
+
+    /* Phase 2 */
+    /*!!START */
+    display: inline-grid;
+
+    grid-template-columns: repeat(6, 100px);
+    grid-template-rows: repeat(3, 50px);
+
+    grid-auto-flow: column;
+
+    align-items: center;
+    justify-items: center;
+    /*!!END */
+}
