@@ -1,0 +1,42 @@
+/* problem 1 */
+
+.rocket_svg {
+    height: 200px;
+    width: auto;
+    margin-left: 300px;
+    transition: transform 2s;
+}
+
+.rocket_svg:hover {
+    transform: rotate(250deg)
+}
+
+/* problem 2 */
+
+.astronaut_svg {
+    height: 200px;
+    width: auto;
+    margin-left: 200px;
+    transition: transform 2s;
+}
+
+.astronaut_svg:hover {
+    transform: translate(100px)
+}
+
+/* BONUS */
+
+.earth_svg {
+    height: 200px;
+    width: auto;
+    margin-left: 300px;
+    animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    } to {
+        transform: rotate(360deg);
+    }
+}
