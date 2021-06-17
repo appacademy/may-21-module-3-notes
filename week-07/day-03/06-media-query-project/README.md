@@ -1,7 +1,7 @@
 # Project: CSS Media Queries
 
 In this project, you will use media queries to solve common problems. The
-website has already been created for you, so that you only need to add to
+website has already been created for you so that you only need to add to
 the CSS.
 
 Begin by downloading the project [starter]. Then drag the __index.html__ file
@@ -10,7 +10,7 @@ the **File Explorer** to open the __index.html__ in your browser.
 
 ## Phase 1: Hide elements while printing
 
-Please hide the navigation buttons when printing any page in the website.
+Please hide the navigation buttons when printing any page on the website.
 
 > Hint: This page element is in the `<nav>` tag.
 
@@ -24,7 +24,7 @@ On the overview page, please don't let the header cover the whole page.
 Specifically, cut the header height in half when the browser is less than
 640 pixels tall.
 
-## Phase 3: Show underlines on links on roll over and for mobile users
+## Phase 3: Show underlines on links on rollover and for mobile users
 
 You will probably need to do some research to discover the best media query
 to use.
@@ -37,9 +37,9 @@ Expected Behavior
   right place to click.
 * This does NOT apply to links that are used for navigation like below the
   header, or "Back" on the large image page.
-* This should apply to all pages in the website.
+* This should apply to all pages on the website.
 
-> Hint: Here is some CSS which will show underlines only when hovering over a
+> Hint: Here is some CSS that will show underlines only when hovering over a
 > link.
 
 ```css
@@ -66,10 +66,10 @@ their requests in no particular order.
 2. Title on top of the image (top center)
 3. No blue background leaking out around the photo
 4. Credit/tagline over the image (bottom center)
-5. Hide "Back" button
+5. Hide the "Back" button
 6. Hide the link to Wikimedia
 
-> HINT: The original developer attached a CSS class to the "Back" link and
+> Hint: The original developer attached a CSS class to the "Back" link and
 > the paragraph with the Wikimedia Commons link to make them easier to hide.
 
 ## Phase 5: Improve layout for photo cards by adjusting to browser width
@@ -84,7 +84,7 @@ Here are four possibilities from narrowest to widest:
 * Two columns, image on left with description on right (like second)
 
 It seems like the largest width that looks good for the first option is around
-600 pixels. Then every 300 pixels seems like a good cut over to go to the next
+600 pixels. Then every 300 pixels seems like a good cut-over to go to the next
 layout configuration.
 
 To help you visualize this goal, here are some mockups.
@@ -131,17 +131,19 @@ This one is the current implementation.
 The first issue is that the second layout above would be the best one to use
 printing.
 
-> HINT: If done right, this is a trivial change. Don't worry if you don't
+> Hint: If done right, this is a trivial change. Don't worry if you don't
 > figure that out. It just means you have an opportunity to discuss it with your
 > instructors!
 
 The second issue you might only see on either portrait or landscape (or maybe
-both, depending on margins, paper size and other settings). Specifically, the
-cards get broken up where part is on one page and part is on the next page.
+both, depending on margins, paper size, and other settings). Specifically, the
+cards get broken up where one part is on one page and another part is on the
+next page.
 
 There is a relatively simple solution to this as well, but sometimes it can be
-a little tricky to find this kind solution online because it's changed several
-times over the years so there are a bunch of older, not-so-useful "answers".
+a little tricky to find this kind of solution online because it's changed
+several times over the years so there are a bunch of older, not-so-useful
+"answers".
 
 > Hint: Think about preventing or avoiding page breaks, rather than keeping
 > content together.
@@ -151,7 +153,7 @@ times over the years so there are a bunch of older, not-so-useful "answers".
 If you look carefully, you'll notice the right edge is missing from the
 timeline, even in landscape mode.
 
-In order to make the timeline look it's best at narrow browser widths, scrolling
+To make the timeline look its best at narrow browser widths, scrolling
 is used instead of allowing the timeline to get so narrow that the relative
 sizes of the boxes get lost. However, the `min-width` that triggers the
 scrolling will apply to printing also, unless it's dealt with in a media query.
@@ -163,7 +165,7 @@ Sometimes, portrait mode is so bad that the rightmost label can get visually
 
 > Hint: If you scale down the scroll area (e.g. to 0.5), then you can increase
 > its width in a compensating way (e.g. to 200%). The text might be smaller,
-> but hopefully you can find good numbers where the entire contents fit and
+> but hopefully, you can find good numbers where the entire contents fit and
 > look good.
 
 ## Congratulations

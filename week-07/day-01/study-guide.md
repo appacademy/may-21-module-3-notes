@@ -94,8 +94,9 @@ Learning Objectives:
 
 ### Semantic HTML
 
-Review the [semantic-html.html] file. Try opening it in the browser to see what
-the outcome is!
+Review the [semantic-html.html] file for all the HTML tags that you should know
+the semantic use of for the assessment. Try opening it in the browser to see
+what the outcome is!
 
 - Pay particular attention to picking the most appropriate semantic HTML
   elements. Not everything goes in a `div`!

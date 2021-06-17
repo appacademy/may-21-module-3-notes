@@ -261,6 +261,7 @@ Others:
 - colors in hex value
 - absolute units
   - `px`
+  - `pt`
 - relative units
-  - `em`
   - `rem`
+  - `em`

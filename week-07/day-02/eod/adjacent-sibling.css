@@ -1,5 +1,6 @@
 #adjacent-sibling {
   border: 1px solid black;
+  margin-bottom: 20px;
 }
 
 .item-2 + .item-1 {
