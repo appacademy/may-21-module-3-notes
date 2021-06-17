@@ -35,6 +35,7 @@ Learning Objectives:
   - **transition** - shorthand for `transition-property`, `transition-duration`,
     `transition-timing-function`, and `transition-delay`
     - See here for usage of the [transition property](https://developer.mozilla.org/en-US/docs/Web/CSS/transition)
+- A helpful [guide for CSS transitions](https://www.joshwcomeau.com/animation/css-transitions/)
 
 ## Design Specs
 
