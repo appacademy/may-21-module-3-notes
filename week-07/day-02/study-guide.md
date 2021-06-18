@@ -245,14 +245,28 @@ CSS properties:
 - `border`
 - `margin`
 - `box-sizing`
+  - "border-box" - size includes content only
+  - "content-box" - size includes border, padding, and content
 - `box-shadow`
 - `opacity`
 - `position`
+  - "static" - default
+  - "relative"
+  - "absolute" - removes element from page flow, relative to the closest
+    "relative" ancestor
+  - "fixed" - removes element from page flow, relative to the window
+  - "sticky" - relative to its parent element on scroll
   - `top`
   - `bottom`
   - `left`
   - `right`
   - `z-index`
+- `overflow`
+  - "visible" - default, content is not clipped
+  - "hidden" - content is clipped to fit padding box, no scrollbars
+  - "scroll" - content is clipped to fit padding box, scroll bar
+  - `overflow-x`
+  - `overflow-y`
 
 Others:
 

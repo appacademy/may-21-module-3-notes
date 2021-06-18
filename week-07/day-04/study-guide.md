@@ -104,7 +104,11 @@ Learning Objectives:
   - **un-opinionated** - simple, lightweight packages with only visual style
     - examples of more un-opinionated CSS frameworks:
       - [Pure CSS](https://purecss.io/layouts/)
+        - lightweight
+        - responsive
       - [Tailwind](https://tailwindcss.com/docs)
+        - lightweight
+        - utility-first
   - **opinionated** - dictate the structure and functionality of your entire
     site
     - More opinionated means that a framework comes with more features and
@@ -112,4 +116,8 @@ Learning Objectives:
       customizability
     - examples of more opinionated CSS frameworks:
       - [Bootstrap](https://getbootstrap.com/docs/5.0/getting-started/introduction/)
+        - responsive
+        - developed by Twitter
       - [Material UI](https://material-ui.com/)
+        - responsive
+        - developed by Google

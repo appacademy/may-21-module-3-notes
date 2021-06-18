@@ -27,8 +27,8 @@ Learning Objectives:
    - Accessibility - make colors distinguishable even for the color-blind
      - Use a color blindness simulator like https://www.color-blindness.com/coblis-color-blindness-simulator/
 3. Typography - use readable fonts
-   - serif fonts - small strokes on the ends of letters like Times New Roman
-   - sans-serif fonts - no serifs or small strokes like Helvetica or Verdana
+   - **serif** fonts - small strokes on the ends of letters like Times New Roman
+   - **sans-serif** fonts - no serifs or small strokes like Helvetica or Verdana
 4. Conventions - there are common conventions in design like for iconography
    that should be studied as a web developer
    - ex: three stacked hortizontal lines = hamburger menu icon
