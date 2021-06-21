@@ -80,12 +80,12 @@ selector)
 /* Problem 5 */
 .outer-layer-5 {
 	grid-template-areas:
-		". inner-layer-5 inner-layer-5 inner-layer-5 inner-layer-5"
+		". banana banana banana banana"
 		". . . . .";
 }
 
 .inner-layer-5 {
-	grid-area: inner-layer-5;
+	grid-area: banana;
 }
 
 /* Problem 6 */

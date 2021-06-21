@@ -132,8 +132,8 @@ Example:
     - use brackets around the attribute name to select an element by an
       attribute
     - ex: an HTML element of `<a title="hello-world">` has an attribute of
-      `title`, use the selector `a[title]`
-    - ex: to select all elements with an attribute-value pair of `type=submit`,
+      `title`, use the selector `a[title]` or `*[title]`
+    - ex: to select all elements with an attribute-value pair of `type="submit"`,
       use the selector `*[type=submit]`
   - **compound** selectors - by multiple selectors
     - Combine multiple selectors together into one selector without any spaces
@@ -160,12 +160,12 @@ Example:
         the `h2` selector with a greater than symbol between them, `.menu > h2`
     - **adjacent-sibling** selectors - uses the **plus operator**, "+", to
       combine two selectors, it will select all elements that match the second
-      selector that also share the are the most adjacent younger sibling of all
+      selector that also are the most adjacent younger sibling of all
       elements matching the first selector
       - the second selector **MUST** be the closest younger sibling of the
         first selector
       - ex: to select the `h2` elements that are adjacent-siblings with the `h1`
-        elements (like: `<div class="menu"><h1></h1><h2></h2><div>`), combine
+        elements (like: `<div class="menu"><h1></h1><h2></h2><h2></h2><div>`), combine
         the `h1` selector and the `h2` selector with a plus symbol between them,
         `h1 + h2`
       - ex: In the following example, only the second `h2` element will be
@@ -184,8 +184,13 @@ Example:
     - use a colon, ":", in front of an element state to select an element by
       its state
     - ex: to select all elements that have a state of `hover`, use `*:hover`
-- You can apply rules for multiple selectors using a comma `,`
+- **or** selector - **comma** operator
+  - You can apply rules for multiple selectors using a comma `,`
   - ex: to apply the same styles for both `h1` and `h2` tags - `h1, h2`
+- **not()** CSS function - any CSS selector inside of the `not()` function will
+  not be selected
+  - ex: `li:not(.active)` will select all `li` elements that do not have a class
+    of `active`
 - CSS rules can override each other depending on the order in which the rules
   are applied, but also the level of specificity
   - CSS rules are read top-down, so the bottom rules will override the top rules
@@ -202,6 +207,9 @@ Example:
        winner, STOP.
     4. They have the same number of ids, classes, and tags. The rule that the
        browser read last wins.
+
+0 - 0 - 0
+#of ids - #of classes and/or pseudo-classes and/or attributes - #of tags
 
 ## Box Model and Positioning
 
@@ -245,8 +253,8 @@ CSS properties:
 - `border`
 - `margin`
 - `box-sizing`
-  - "border-box" - size includes content only
-  - "content-box" - size includes border, padding, and content
+  - "border-box" - size includes border, padding, and content
+  - "content-box" - size includes content only
 - `box-shadow`
 - `opacity`
 - `position`
@@ -263,7 +271,7 @@ CSS properties:
   - `z-index`
 - `overflow`
   - "visible" - default, content is not clipped
-  - "hidden" - content is clipped to fit padding box, no scrollbars
+  - "hidden" - content is clipped to fit padding box, no scroll bars
   - "scroll" - content is clipped to fit padding box, scroll bar
   - `overflow-x`
   - `overflow-y`
@@ -273,6 +281,7 @@ Others:
 - `rgb()`, `hsl()`, `rgba()`, `hsla()` CSS functions
 - alpha channel value
 - colors in hex value
+  - `#00f` same as `#0000ff`
 - absolute units
   - `px`
   - `pt`

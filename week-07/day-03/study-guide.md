@@ -37,9 +37,9 @@ CSS properties:
   - `flex-wrap`
   - `flex-direction`
 - `order`
+- `gap`
 - `justify-content` (behavior changes depending on the `flex-direction` property)
 - `align-items` (behavior changes depending on the `flex-direction` property)
-- `gap`
 - `flex`
   - `flex-grow`
   - `flex-shrink`
@@ -87,10 +87,12 @@ You should know or be able to easily locate in the docs and use the following
 CSS properties:
 
 - `display: grid;`
-- `grid-template-columns`
-- `grid-template-rows`
+- `grid-template`
+  - `grid-template-columns`
+  - `grid-template-rows`
 - `grid-template-areas` - grid parent
   - `grid-area` - grid child item
+
 - `grid-gap`
   - `grid-row-gap`
   - `grid-column-gap`

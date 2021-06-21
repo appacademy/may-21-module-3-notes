@@ -21,6 +21,8 @@ Learning Objectives:
 
 1. White Space - leave empty space surrounding text, images, and interactive
    elements
+   - for legibility
+   - for accessibility
 2. Colors
    - Aesthetics - colors should complement each other
      - Use a color wheel like https://color.adobe.com/create/color-wheel
