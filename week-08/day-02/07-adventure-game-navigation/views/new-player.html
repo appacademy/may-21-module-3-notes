@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>App Academy Adventure</title>
+</head>
+
+<body>
+  <h1>Welcome to App Academy Adventure!</h1>
+  <p>To start, select a username and room:</p>
+  <form method="post" action="/player">
+    <input type="text" placeholder="Username" name="name" />
+    <select name="room_id" id="pet-select">
+      <option value="">--Choose a starting room--</option>
+      <option value="1">Crossroad</option>
+      <option value="2">Northern point</option>
+      <option value="3">Eastern point</option>
+      <option value="4">Western point</option>
+      <option value="5">Southern point</option>
+    </select>
+    <button type="submit">Enter New Adventure</button>
+  </form>
+</body>
+
+</html>

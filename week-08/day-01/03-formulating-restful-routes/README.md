@@ -36,7 +36,10 @@ For example, to access the home page of a site, the RESTful endpoint could be
   - `GET /comments/:commentId/edit`
 - Submit a like for a post
   - `POST /posts/:postId/like`
+- Delete a like for a post
+  - `POST /posts/:postId/like/delete`
 - Access all the posts of a user
   - `GET /users/:userId/posts`
 - Submit a search on posts
   - `POST /posts/search`
+  - `GET /posts/search`
