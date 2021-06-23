@@ -119,7 +119,6 @@ const myPromise = new Promise((resolve, reject) => {
   setTimeout(() => resolve(3), 1000)
 });
 
-
 async function asyncFunc() {
   console.log('before await');
   const res = await myPromise; // res = 3

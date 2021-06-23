@@ -67,7 +67,6 @@ function workout() {
     .catch((err) => console.log(err));
 }
 
-
 /*
 Test your code:
 
