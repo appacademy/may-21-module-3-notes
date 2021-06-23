@@ -168,7 +168,7 @@ Here are examples of `fetch` requests using the Basic HTTP project from Monday:
 ```js
 fetch('http://localhost:5000/products')
 .then(response => {
-  response.text(); // Promise that resolves to the body of the response
+  return response.text(); // Promise that resolves to the body of the response
 })
 .then(body => {
   console.log(body); // HTML text
@@ -191,8 +191,10 @@ fetch(
     headers: { 'Content-Type': 'application/www-x-form-urlencoded' },
     body: 'name=Body+Wash&description=clean&price=10&categories=beauty'
   }
-).then(response => {
+).then(async response => {
   console.log(response.headers.get('Location')); // '/products/:productId
   console.log(response.status); // 302
+  const body = await res.text();
+  console.log(body); // '' (empty string, no body) 
 });
 ```
