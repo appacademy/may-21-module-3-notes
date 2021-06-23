@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cat Form</title>
+</head>
+
+<body>
+  <img src="/assets/images/cat.jpg" />
+  <form method="post" action="/cat">
+    <label>
+      Name
+      <input type="text" name="name" />
+    </label>
+    <label>
+      Pattern
+      <select name="pattern">
+        <option value="tabby">Tabby</option>
+        <option value="striped">Striped</option>
+        <option value="tortie">Tortie</option>
+        <option value="calico">Calico</option>
+        <option value="bicolor">Bicolor</option>
+      </select>
+    </label>
+    <label>
+      Size
+      <input type="number" name="size" />
+    </label>
+    <label>
+      Description
+      <textarea name="description"></textarea>
+    </label>
+    <input type="submit" value="Create Cat" />
+  </form>
+</body>
+
+</html>
