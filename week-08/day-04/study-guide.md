@@ -66,3 +66,41 @@ For Nested Resources:
   into JavaScript objects
 
 ### What is JSON?
+
+- **JSON** - JavaScript Object Notation, a way of formatting data
+  - **JSON IS A STRING** not an object!
+  - string that contains data that most programming languages and humans can
+    read and understand
+  - looks very similar to the syntax of a JavaScript object
+  - made to give a common data format for sending and receiving data regardless
+    of what programming language the server or the client is using
+  - strings in JSON are represented with double quotations, can never be single
+    quotations
+  - here are valid JSON data types:
+    - string
+      - must be in double quotations
+      - ex: `"Hello World!"`
+    - number
+      - ex: `1`, `234`
+    - boolean
+      - `true`
+      - `false`
+    - `null`
+    - object
+      - keys of a JSON object must be a string
+      - no trailing commas
+      - can have nested objects or arrays
+      - ex: `{ "hello": "world" }`
+    - array:
+      - can have different data types in a single array
+      - ex: `["hello", null, 1, { "hello": "world" }]`
+- **serialize JSON** - convert a JavaScript object into a JSON string
+  - `JSON.stringify(obj)` - calling `JSON.stringify()` with a JavaScript object,
+    `obj`, as an argument results in a JSON string
+- **deserialize JSON** - convert a JSON string into a JavaScript object
+  - `JSON.parse(json)` - calling `JSON.parse()` with a JSON string, `json`,
+    as an argument results in a JavaScript object
+- you can serialize and deserialize JSON in both Node.js and in the browser
+  console
+
+**You should know how to read a JSON file and determine if it's proper JSON.**
