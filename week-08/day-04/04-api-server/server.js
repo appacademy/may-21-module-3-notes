@@ -59,10 +59,11 @@ const server = http.createServer((req, res) => {
     }
     // GET /dogs/:dogId
     if (req.method === 'GET' && req.url.startsWith('/dogs/')) {
-      const urlParts = req.url.split('/');
+      const urlParts = req.url.split('/'); // ['', 'dogs', '1']
       if (urlParts.length === 3) {
         const dogId = urlParts[2];
         const dog = dogs.find(dog => dog.dogId == dogId);
+        // const dog = dogs.find(dog => dog.dogId === Number(dogId));
         res.statusCode = 200;
         res.setHeader('Content-Type', 'application/json');
         res.write(JSON.stringify(dog));
@@ -89,12 +90,12 @@ const server = http.createServer((req, res) => {
       const urlParts = req.url.split('/');
       if (urlParts.length === 3) {
         const dogId = urlParts[2];
-        const { name, age } = req.body;
         const dog = dogs.find(dog => dog.dogId == dogId);
+        const { name, age } = req.body;
         dog.name = name || dog.name;
         dog.age = age || dog.age;
 
-        res.statusCode = 201;
+        res.statusCode = 200;
         res.setHeader('Content-Type', 'application/json');
         res.write(JSON.stringify(dog));
         return res.end();
