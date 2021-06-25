@@ -30,7 +30,7 @@
 
 ## HTML Form Submission
 
-Example of submitting an HTML form:
+Example of submitting an HTML form like the one in [this HTML document](../day-02/05-html-form-submission/views/cat-form.html):
 
 ```plaintext
 POST /cat
