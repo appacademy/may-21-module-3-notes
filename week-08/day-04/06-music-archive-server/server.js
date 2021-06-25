@@ -181,7 +181,15 @@ const server = http.createServer((req, res) => {
         }
 
         delete artists[artist.artistId];
-        albums = Object.values(albums).filter(album => album.artistId == artistId);
+        // find all of the artists albums and delete them as well
+        const artistAlbums = Object.values(albums).filter(album => album.artistId == artistId);
+        artistAlbums.forEach(album => {
+          delete albums[album.albumId];
+          const albumSongs = Object.values(songs).filter(song => song.albumId == album.albumId);
+          albumSongs.forEach(song => {
+            delete songs[song.songId];
+          });
+        });
 
         const resBody = JSON.stringify("Successfully deleted");
         res.statusCode = 200;

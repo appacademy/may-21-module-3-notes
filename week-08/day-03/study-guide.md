@@ -57,9 +57,6 @@ myPromise
   .then((resolveArg) => {
     // resolveArg is the argument that gets passed into the resolve function in the promise
     // executed when promise is resolved
-  }, (rejectArg) => {
-    // rejectArg is the argument that gets passed into the reject function in the promise
-    // executed when promise is rejected
   });
 ```
 
@@ -88,6 +85,8 @@ myPromise
 
 1. `Pending` - the Promise object has not resolved. Once it does, the state of
    the Promise object may transition to either the fulfilled or rejected state.
+   - default state - when a Promise first gets created, its state will be
+     pending
 2. `Fulfilled` - Whatever operation the Promise represented succeeded and your
    success handler will get called. Now that it's fulfilled, the Promise:
     - must not transition to any other state.
@@ -192,9 +191,96 @@ fetch(
     body: 'name=Body+Wash&description=clean&price=10&categories=beauty'
   }
 ).then(async response => {
-  console.log(response.headers.get('Location')); // '/products/:productId
-  console.log(response.status); // 302
-  const body = await res.text();
-  console.log(body); // '' (empty string, no body) 
+  console.log(response.headers.get('Content-Type')); // text/html
+  console.log(response.status); // 200
+  console.log(response.redirected); // true
+  console.log(response.url); // /products/2
 });
+
+// OR:
+const body = new URLSearchParams({
+  name: 'Body Wash',
+  description: 'clean',
+  price: 10,
+  categories: 'beauty'
+});
+fetch(
+  'http://localhost:5000/products',
+  {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/www-x-form-urlencoded' },
+    body
+  }
+).then(async response => {
+  console.log(response.headers.get('Content-Type')); // text/html
+  console.log(response.status); // 200
+  console.log(response.redirected); // true
+  console.log(response.url); // /products/2
+});
+```
+
+JSON version:
+
+```js
+fetch(
+  'http://localhost:5000/products',
+  {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({
+      name: 'Body Wash',
+      description: 'clean',
+      price: 10,
+      categories: 'beauty'
+    })
+  }
+).then(async response => {
+  console.log(response.headers.get('Content-Type')); // application/json
+  console.log(response.status); // 201
+  const body = await response.json();
+  console.log(body); // product information that you just created as a JavaScript object
+});
+```
+
+```js
+async function makeAProduct() {
+  const response = await fetch(
+    'http://localhost:5000/products',
+    {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        name: 'Body Wash',
+        description: 'clean',
+        price: 10,
+        categories: 'beauty'
+      })
+    }
+  );
+  const body = await response.json();
+  // something with the body
+  return body; // turn into the resolved value of the makeAProduct() Promise
+}
+
+function makeAProduct() {
+  return fetch(
+    'http://localhost:5000/products',
+    {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        name: 'Body Wash',
+        description: 'clean',
+        price: 10,
+        categories: 'beauty'
+      })
+    }
+  ).then(async response => {
+    console.log(response.headers.get('Content-Type')); // application/json
+    console.log(response.status); // 201
+    const body = await response.json();
+    console.log(body); // product information that you just created as a JavaScript object
+    return body;
+  });
+}
 ```

@@ -252,33 +252,41 @@ Learning Objectives:
     - for example, maybe there could be two comments with the text
       "Hello World!", how do you distinguish between the two comments? By
       assigning an **id** like `145` and `146` to each of the comments
+- **route parameter** - a section of the URL that is a placeholder for a value
+  that it represents (a representation of a value in the URL)
+  - you can identify a route parameter by the `:` colon in front of a variable
+    name
+  - ex: Route pattern: `/posts/:postId`
+    - URL pattern: `/posts/:postId`
+    - route parameter: `postId`
+    - example URL: `/posts/2` where `postId` is `2`
 - `GET` and `POST` are the only methods that can be made through an HTML form
   submission, so they are the only methods that you can use in a traditional
   web application
   - the RESTful routes for a traditional web app will only have `GET` and `POST`
     methods
 
-| Path Pattern                    | HTTP Verb | Meaning                                                               |
-| ------------------------------- | --------- | --------------------------------------------------------------------- |
-| /resource-name                  | GET       | Index page: Get an HTML-based list of the resource                    |
-| /resource-name/new              | GET       | Create form page: Show a form to create a new record for the resource |
-| /resource-name                  | POST      | Submit create form: Create a new record for the resource              |
-| /resource-name/record-id        | GET       | Detail page: See the details of the specified record                  |
-| /resource-name/record-id/edit   | GET       | Edit form page: Show the edit form for the specified record           |
-| /resource-name/record-id        | POST      | Submit edit form: Update the specified record                         |
-| /resource-name/record-id/delete | POST      | Submit delete form: Delete the specified record                       |
+| Path Pattern                     | HTTP Verb | Meaning                                                               |
+| -------------------------------- | --------- | --------------------------------------------------------------------- |
+| /resource-name                   | GET       | Index page: Get an HTML-based list of the resource                    |
+| /resource-name/new               | GET       | Create form page: Show a form to create a new record for the resource |
+| /resource-name                   | POST      | Submit create form: Create a new record for the resource              |
+| /resource-name/:record-id        | GET       | Detail page: See the details of the specified record                  |
+| /resource-name/:record-id/edit   | GET       | Edit form page: Show the edit form for the specified record           |
+| /resource-name/:record-id        | POST      | Submit edit form: Update the specified record                         |
+| /resource-name/:record-id/delete | POST      | Submit delete form: Delete the specified record                       |
 
 For Nested Resources:
 
-| Path Pattern                                 | HTTP Verb | Meaning                                                                                                      |
-| -------------------------------------------- | --------- | ------------------------------------------------------------------------------------------------------------ |
-| /resource-name/record-id/nested-resource     | GET       | Index page: Get an HTML-based list of the nested resource related to the specified record                    |
-| /resource-name/record-id/nested-resource/new | GET       | Create form page: Show a form to create a new record for the nested resource related to the specified record |
-| /resource-name/record-id/nested-resource     | POST      | Submit create form: Create a new record for the nested resource related to the specified record              |
-| /nested-resource/nested-record-id            | GET       | Detail page: See the details of the specified nested resource's record                                       |
-| /nested-resource/nested-record-id/edit       | GET       | Edit form page: Show the edit form for the specified nested resource's record                                |
-| /nested-resource/nested-record-id            | POST      | Submit edit form: Update the specified nested resource's record                                              |
-| /nested-resource/nested-record-id/delete     | POST      | Submit delete form: Delete the specified nested resource's record                                            |
+| Path Pattern                                  | HTTP Verb | Meaning                                                                                                      |
+| --------------------------------------------- | --------- | ------------------------------------------------------------------------------------------------------------ |
+| /resource-name/:record-id/nested-resource     | GET       | Index page: Get an HTML-based list of the nested resource related to the specified record                    |
+| /resource-name/:record-id/nested-resource/new | GET       | Create form page: Show a form to create a new record for the nested resource related to the specified record |
+| /resource-name/:record-id/nested-resource     | POST      | Submit create form: Create a new record for the nested resource related to the specified record              |
+| /nested-resource/:nested-record-id            | GET       | Detail page: See the details of the specified nested resource's record                                       |
+| /nested-resource/:nested-record-id/edit       | GET       | Edit form page: Show the edit form for the specified nested resource's record                                |
+| /nested-resource/:nested-record-id            | POST      | Submit edit form: Update the specified nested resource's record                                              |
+| /nested-resource/:nested-record-id/delete     | POST      | Submit delete form: Delete the specified nested resource's record                                            |
 
 ## Postman
 
