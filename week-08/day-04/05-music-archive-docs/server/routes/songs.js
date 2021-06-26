@@ -49,6 +49,7 @@ router.post('/albums/:albumId/songs', asyncHandler(async (req, res) => {
   let song = await album.createSong({ name, lyrics, trackNumber });
   song = await db.Song.findByPk(song.songId);
   
+  res.status(201);
   return res.json(song);
 }));
 

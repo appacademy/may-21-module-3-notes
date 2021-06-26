@@ -30,6 +30,7 @@ router.post('/artists', asyncHandler(async (req, res) => {
   let artist = await db.Artist.create({ name });
   artist = await db.Artist.findByPk(artist.artistId);
   
+  res.status(201);
   return res.json(artist);
 }));
 

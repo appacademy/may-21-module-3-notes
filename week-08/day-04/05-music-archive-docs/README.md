@@ -142,7 +142,7 @@ Request components:
 
 Response components:
 
-- Status Code: 200
+- Status Code: 201
 - Headers:
   - Content-Type: application/json
 - Body: information about the newly created artist
@@ -285,7 +285,7 @@ Request components:
 
 Response components:
 
-- Status Code: 200
+- Status Code: 201
 - Headers:
   - Content-Type: application/json
 - Body: information about the newly created album
@@ -458,7 +458,7 @@ Request components:
 
 Response components:
 
-- Status Code: 200
+- Status Code: 201
 - Headers:
   - Content-Type: application/json
 - Body: information about the newly created song
