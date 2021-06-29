@@ -8,9 +8,9 @@ element, but it can also be other smaller components of an HTML element. For
 example, if you have an HTML DOM element of `<h1>Hello World!</h1>`, `h1` and
 the text of "Hello World!" are both nodes.
 
-An **HTML Collection** contains an array of HTML elements.
+An **HTML Collection** contains an array-like object of HTML elements.
 
-A **NodeList** contains an array of Nodes.
+A **NodeList** contains an array-like object of Nodes.
 
 ## Example Project
 
