@@ -7,8 +7,6 @@ const initializePage = () => {
     container.style.alignItems = "center";
     container.style.marginTop = "20px";
     document.body.appendChild(container);
-
-    createMainContent();
 };
 
 const createMainContent = () => {
@@ -32,15 +30,15 @@ const fetchImage = async () => {
         const kittenResponse = await fetch("https://api.thecatapi.com/v1/images/search?size=small");
         // Converts to JSON
         const kittenData = await kittenResponse.json();
-
+        // console.log(kittenData);
         document.querySelector("img").src = kittenData[0].url;
     } catch (e) {
         console.log("Failed to fetch image", e);
     }
 };
 
-window.onload = async () => {
+window.onload = () => {
     initializePage();
-
+    createMainContent();
     fetchImage();
 };
