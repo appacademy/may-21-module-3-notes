@@ -35,7 +35,7 @@ window.addEventListener("DOMContentLoaded", () => {
         const section = document.getElementById("part-3");
         section.style.backgroundColor = e.target.value;
     }
-
+    // what if you used the "input" event type instead here? would the behavior change?
     colorSelect.addEventListener("change", changeColor);
 
     // PART 4

@@ -1,6 +1,8 @@
 import Board from "./board.js";
 
 const createBoard = (grid) => {
+    // console.log(grid);
+
     const reset = document.createElement("button");
     reset.innerText = "Reset Game";
     reset.className = "reset";
