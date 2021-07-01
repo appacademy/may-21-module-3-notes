@@ -57,7 +57,7 @@ function playTurn(state, squareIndex) {
 
   // update the state of the game when the turn is over
   updateGameStatus(state);
-  // switch the current player to the other player
+  // switch the current player to the other player if the game is not over
   if (!state.gameStatus) switchPlayer(state);
 }
 
@@ -70,12 +70,8 @@ function resetGame(state) {
 
 function switchPlayer(state) {
   // switch the current player on the state
-  const { currentPlayerSymbol } = state;
-  if (currentPlayerSymbol === PLAYER_ONE_SYMBOL) {
-    state.currentPlayerSymbol = PLAYER_TWO_SYMBOL;
-  } else {
-    state.currentPlayerSymbol = PLAYER_ONE_SYMBOL;
-  }
+  state.currentPlayerSymbol = state.currentPlayerSymbol === PLAYER_ONE_SYMBOL ?
+    PLAYER_TWO_SYMBOL : PLAYER_ONE_SYMBOL;
 }
 
 function updateGameStatus(state) {

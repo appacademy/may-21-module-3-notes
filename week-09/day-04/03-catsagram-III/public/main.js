@@ -33,7 +33,7 @@ const fetchImage = async () => {
         const kittenImg = document.querySelector("img");
         kittenImg.src = kittenImgUrl;
         // Store the new URL in localStorage
-        storeImgUrl(kittenImgUrl)
+        storeImgUrl(kittenImgUrl);
 
         // After the image is finished loading, reset the score and comments
         kittenImg.addEventListener('load', () => {
@@ -67,4 +67,4 @@ const loadImgUrl = () => {
 const storeImgUrl = (url) => {
     // Store the URL in localStorage
     localStorage.setItem("url", url);
-}
+};
