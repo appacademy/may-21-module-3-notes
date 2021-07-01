@@ -31,7 +31,9 @@ const fetchImage = async () => {
         // Converts to JSON
         const kittenData = await kittenResponse.json();
         // console.log(kittenData);
-        document.querySelector("img").src = kittenData[0].url;
+        const kittenImgUrl = kittenData[0].url;
+        const kittenImg = document.querySelector("img");
+        kittenImg.src = kittenImgUrl;
     } catch (e) {
         console.log("Failed to fetch image", e);
     }
