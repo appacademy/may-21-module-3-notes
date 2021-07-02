@@ -123,6 +123,21 @@ Example of imported JavaScript files at the end of the `<body>` HTML element:
 
 ### Examples
 
+Given HTML:
+
+```html
+<!DOCTYPE html>
+<html>
+ <head>
+   <title>Importing JavaScript to HTML</title>
+   <script type="module" src="import.js"></script>
+ <head>
+ <body>
+   ...
+ </body>
+</html>
+```
+
 How to import an exported unnamed item:
 
 ```js
@@ -142,6 +157,7 @@ printHelloWorld(); // "Hello World!" will be printed to the console
 How to import multiple exported named items:
 
 ```js
+// export.js
 export const hello = "Hello World!";
 export const oneStep = "One Step at a Time...";
 export function printPhrase(phrase) {
@@ -157,9 +173,22 @@ printPhrase(hello); // "Hello World!" will be printed to the console
 printPhrase(oneStep); // Error: oneStep is not defined
 ```
 
+OR using an alias:
+
+```js
+// import.js
+import * as allNamedItems from './export.js';
+
+console.log(allNamedItems); // { hello, oneStep, printPhrase }
+
+allNamedItems.printPhrase(allNamedItems.hello); // "Hello World!" will be printed to the console
+allNamedItems.printPhrase(allNamedItems.oneStep); // "One Step at a Time..." will be printed to the console
+```
+
 How to import multiple exported named items AND an unnamed item:
 
 ```js
+// export.js
 export const hello = "Hello World!";
 export const oneStep = "One Step at a Time...";
 export default (phrase) => {

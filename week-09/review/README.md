@@ -47,7 +47,7 @@ the of the following practices.
 - Add/Remove Event Listeners
   - Wednesday: Add/Removing Event Listeners Practice
 - Default Behaviors, Preventing Default Behaviors
-  - Wednesday: Default Behvaiors Quiz
+  - Wednesday: Default Behaviors Quiz
 - Event Propagation, Event Delegation
   - Wednesday: [Event Propagation Example](../day-03/eod/stop-propagation-example)
 - Storing Data in Elements

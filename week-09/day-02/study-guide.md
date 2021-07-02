@@ -32,7 +32,7 @@ HTMLCollections.
     - `document.getElementById(id)` - takes in an `id` string and returns the
       first HTML element with an `id` attribute that matches the given `id`
       string
-      - ex: `document.getElementsById('title')` will return an HTML DOM element
+      - ex: `document.getElementById('title')` will return an HTML DOM element
         with an `id` attribute with a value of "title"
     - `document.getElementsByTagName(tag)` - takes in a `tag` string and returns
       all the HTML elements in an `HTMLCollection` with the tagname matching the
@@ -48,8 +48,8 @@ HTMLCollections.
     - `document.querySelector(selector)` - takes in a `selector` string and
       returns the first Node or HTML Element that matches the given CSS
       `selector`
-      - ex: `document.querySelectorAll('div.blue')` will return a `div` HTML
-        element with a class of "blue"
+      - ex: `document.querySelector('div.blue')` will return the first `div`
+        HTML element with a class of "blue"
     - `document.querySelectorAll(selector)` - takes in a `selector` string and
       returns all the Nodes or HTML Elements in a `NodeList` that matches the
       given CSS `selector`
@@ -72,19 +72,23 @@ HTMLCollections.
       below for details about how to use this method)
 - useful properties of an HTML element
   - `children` - returns all the HTML elements as an `HTMLCollection` that are
-    the children of the given element
+    the direct children of the given element
     - ex:
       - HTML: `<div>Hello <span>World!</span></div>`
       - element: `const div = document.querySelector('div')`
       - `div.children` would be an `HTMLCollection` that includes just the
         `span` element (`[span]`)
-  - `childNodes` - returns all the Nodes as an `NodeList` that are the children
-    of the given element
+      - `Array.from(div.children)` allows you to turn the `HTMLCollection` into
+        an array
+  - `childNodes` - returns all the Nodes as an `NodeList` that are the direct
+    children of the given element
     - ex:
       - HTML: `<div>Hello <span>World!</span></div>`
       - element: `const div = document.querySelector('div')`
       - `div.childNodes` would be an `NodeList` that includes the text "Hello "
         and the `span` element (`[text, span]`)
+      - `Array.from(div.childNodes)` allows you to turn the `NodeList` into an
+        array
   - `innerText` - used to read and set the text content of an element
     - ex:
       - HTML: `<p>Hello World!</p>`

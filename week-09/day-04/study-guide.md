@@ -20,17 +20,21 @@ Learning Objectives:
     request/response to and from the server, can only be read/set on the client,
     easier to read and write than cookies
     - **`localStorage`** - or `window.localStorage`, all data will be persist
-      until deleted by the user or the application
+      until deleted by the user or the application, no expiration date
       - to read a key-value pair in `localStorage`:
         `localStorage.getItem(key)` => value
       - to write a key-value pair in `localStorage`:
         `localStorage.setItem(key, value)`
+      - to remove a key-value pair in `localStorage`:
+        `localStorage.removeItem(key, value)`
     - **`sessionStorage`** - or `window.sessionStorage`, all data will be
-      automatically be deleted when the browser is closed
+      automatically be deleted when the browser is closed (session is over)
       - to read a key-value pair in `sessionStorage`:
         `sessionStorage.getItem(key)` => value
       - to write a key-value pair in `sessionStorage`:
         `sessionStorage.setItem(key, value)`
+      - to remove a key-value pair in `sessionStorage`:
+        `sessionStorage.removeItem(key, value)`
   - Cookie - will be sent back and forth with every request/response to and from
     the server, can be read/set on both the client and the server, harder to
     read and write than Web Storage API, can only hold 4kB of data
@@ -41,7 +45,7 @@ Learning Objectives:
         - ex: to add a `greeting` cookie with a value of "Hello World!" that
           will expire after the browser is closed:
           `document.cookie = "greeting=Hello World!"`
-    - **persistent cookie**
+    - **persistent cookie** - persists until an expiration date or age
       - to write a persistent cookie, you need to set a maximum age or expire
         date:
         `document.cookie = "cookieName=cookieValue; max-age=" + numSeconds` OR
@@ -97,5 +101,6 @@ Learning Objectives:
     - data can be accessed by all clients
     - persists until deleted by the server
     - data must be requested by the client and sent as a response by the server
+    - can restrict information to be sent to the client
 - use the "Application" tab in the Developer Tools to read/manipulate the
   different client storage options

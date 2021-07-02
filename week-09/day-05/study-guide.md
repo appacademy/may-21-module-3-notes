@@ -102,6 +102,8 @@ Learning Objectives:
 
 ### Describe Sending a Request using Network Terminology
 
+
+
 ## Deployment
 
 Learning Objectives

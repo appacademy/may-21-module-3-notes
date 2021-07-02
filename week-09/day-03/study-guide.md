@@ -130,6 +130,8 @@ would add an event listener to the `window` for the `eventType` of
 
 ```js
 window.addEventListener('DOMContentLoaded', () => console.log("Hello World!"));
+// can also do this:
+// document.addEventListener('DOMContentLoaded', () => console.log("Hello World!"));
 ```
 
 To print the value of a form `<input type="text">` when a user types a character
