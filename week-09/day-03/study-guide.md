@@ -50,9 +50,46 @@ Learning Objectives:
     but you should be able to use the MDN documentation for any event type and
     figure out how to use it
     - all other event types: [MDN Events](https://developer.mozilla.org/en-US/docs/Web/Events#event_listing)
-  - **Event Delegation** - 
-  - **Event Propagation** - 
-  - **Default Event Behavior** - 
+  - **Event Capturing and Bubbling** - the order which the event handlers get
+    called for an action
+    - You can add an event handler that will be triggered for a specific action
+      and let the browser know in what order it should be triggered
+    - There are two phases which you can attach the event handler to are
+      the capturing and bubbling phases
+      - the default phase, if no phase is specified when attaching the event
+        listener, is the bubbling phase
+      - the capturing phase will happen first when the action is triggered,
+        then the bubbling phase
+      - **you don't need to know about the capturing phase for the assessment!**
+    - **Event Propagation** - the order in which the event handlers on each
+      element gets triggered in each phase:
+      - In the capturing phase:
+        - The browser checks to see if the element's outer-most ancestor `<html>`
+          has a capturing event handler registered on it for the triggered action
+          and runs it if so
+        - Then it moves on to the next element inside `<html>` and does the same
+          thing, then the next one, and so on until it reaches the element that
+          was actually selected
+      - In the bubbling phase, the exact opposite occurs:
+        - The browser checks to see if the element selected has a bubbling event
+          handler registered on it for the triggered action and runs it if so
+        - Then it moves on to the next immediate ancestor element and does the
+          same thing, then the next one, and so on until it reaches the `<html>`
+          element
+      - to stop the propagation of the event to the next element, you can call
+        `event.stopPropagation()` on the `event` object
+        - See [MDN docs on Event.stopPropagation()](https://developer.mozilla.org/en-US/docs/Web/API/Event/stopPropagation)
+  - **Default Event Behavior** - default actions on an event
+    - depends on the event itself
+    - examples of default event behavior:
+      - toggling a checkbox is the default action of clicking on a checkbox
+      - loading a new page is the default action of submitting a `form`
+      - automatically change the value of the text `input` whenever the user
+        types something inside of it is the default text `input` action
+    - to prevent the default action from happening, call `.preventDefault()`
+      on the `event` object
+      - ex: `event.preventDefault()`
+    - See [MDN docs on Event.preventDefault()](https://developer.mozilla.org/en-US/docs/Web/API/Event/preventDefault)
   - So how do you programmatically execute code whenever an event on an HTML
     element happens or gets triggered? By subscribing to the particular event
     on a specific HTML element using an event listener
