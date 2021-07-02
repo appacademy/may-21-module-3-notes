@@ -1,5 +1,7 @@
 # Week 9 Review
 
+**Good Luck on Tuesday everyone!!!**
+
 ## Suggested Study Plan
 
 - Take the practice assessment at least 5 times over
